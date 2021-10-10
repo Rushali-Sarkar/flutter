@@ -10,11 +10,17 @@ class PriceScreen extends StatefulWidget {
 class _PriceScreenState extends State<PriceScreen> {
 
   String currentCurrency = "AUD";
-  String BTCcurrency = "75833.65";
-  String ETHcurrency = "4829.02";
-  String LTCcurrency = "245.21";
+  String BTCcurrency = "?";
+  String ETHcurrency = "?";
+  String LTCcurrency = "?";
   
   void initializeCoinvalues(String current) async {
+
+    setState(() {
+      BTCcurrency = "?";
+      ETHcurrency = "?";
+      LTCcurrency = "?";
+    });
     CoinData coin = CoinData();
     List<double> allCurrencies = await coin.getCoinData(current);
     setState(() {
