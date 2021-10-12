@@ -51,6 +51,7 @@ class CoinData {
     for (String crypto in cryptoList) {
       String requestURL =
           '$coinAPIURL/$crypto/$selectedCurrency?apikey=$apiKey';
+      print(requestURL);
       var client = http.Client();
       var url = Uri.parse(requestURL);
       var response = await client.get(url);

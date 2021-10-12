@@ -20,11 +20,11 @@ class _PriceScreenState extends State<PriceScreen> {
       BTCcurrency = "?";
       ETHcurrency = "?";
       LTCcurrency = "?";
+      currentCurrency = current;
     });
     CoinData coin = CoinData();
     List<double> allCurrencies = await coin.getCoinData(current);
     setState(() {
-    currentCurrency = current;
     BTCcurrency = allCurrencies[0].toStringAsFixed(2);
     ETHcurrency = allCurrencies[1].toStringAsFixed(2);
     LTCcurrency = allCurrencies[2].toStringAsFixed(2);
