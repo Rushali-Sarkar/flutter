@@ -7,6 +7,7 @@ import 'package:flash_chat/screens/chat_screen.dart';
 void main() => runApp(const FlashChat());
 class FlashChat extends StatelessWidget {
   const FlashChat({Key? key}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,4 +21,4 @@ class FlashChat extends StatelessWidget {
       },
     );
   }
-}
+}   
